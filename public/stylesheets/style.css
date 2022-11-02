@@ -1,0 +1,200 @@
+:root {
+    --primary: #9dbdc6;
+    --secondary: #daeaef;
+    --tertiary: #ff3d2e;
+    --light: #ffffff;
+    --dark: #272f32;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  main {
+    flex: 1;
+    padding: 2% 4%;
+  }
+  
+  h1 {
+  font-family: 'Poiret One', cursive;
+  }
+  
+  h5 {
+    color: var(--dark);
+    }
+  
+  body {
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  
+  .card-customization {
+    border-left-width: 0px;
+    border-right-width: 0px;
+  }
+  
+  .page-title {
+    color: var(--secondary);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .card-color {
+  background-color: var(--primary);
+  }
+  
+  a {
+    text-decoration: none;
+    color: #225ca3;
+    font-weight: bold;
+    transition: color .1s;
+  }
+  
+  a:hover {
+    color: #3486eb;
+  }
+  
+  button {
+    background-color: var(--primary);
+    color:var(--dark);
+    border: 0;
+    padding: 1%;
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: var(--secondary);
+  }
+  
+  .btn-no-style {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #225ca3;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+    margin-left: 16px;
+  }
+  
+  .btn-no-style:hover {
+    background: none;
+    color: #3486eb;
+  }
+  
+  
+textarea, input {
+    padding: .5%;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+  
+textarea:focus, input:focus {
+    outline: none;
+    border: 1px solid #3486eb;
+}
+  
+textarea {
+    min-width: 100%;
+    min-height: 100px;
+}
+  
+form > div {
+    margin-bottom: 2%;
+}
+  
+form label {
+    display: block;
+}
+  
+.post {
+    margin-bottom: 2%;
+    line-height: 150%;
+}
+  
+.post .title span {
+    font-style: italic;
+    font-size: 90%;
+    color: #7d7d7d;
+}
+  
+.edit-link {
+    display: block;
+    margin: -1.5% 0 2% 0;
+}
+  
+.comment {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+  
+.comment-form {
+    margin-bottom: 5%;
+}
+  
+.comment:nth-child(odd) {
+    background-color: #fff5eb;
+}
+  
+.comment .meta {
+    font-size: 90%;
+    margin-bottom: .5%;
+    opacity: .6;
+}
+  
+.new-post-form input {
+    width: 100%;
+}
+  
+.new-post-form textarea {
+    width: 100%;
+}
+  
+.login-form, .signup-form {
+    padding: 20px 0 10px 20px;
+}
+  
+footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+}
+  
+.card-body {
+    display: inline-block;
+}
+  
+.account-cards {
+    padding-left: 0px; 
+    padding-right: 0px;
+}
+  
+.card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+}
+  
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    nav {
+      background-color: var(--light);
+    }
+}
