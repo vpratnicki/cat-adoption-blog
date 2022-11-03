@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Cat, User } = require('../../models');
+const { Cat, User, Comment } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
@@ -7,6 +7,14 @@ router.get('/', (req, res) => {
         attributes: ['id', 'name', 'age','description', 'personality', 'status', 'created_at'],
         order: [['created_at', 'DESC']],
         include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'cat_id', 'user_id', 'created_at'],
+                include: {
+                  model: User,
+                  attributes: ['username']
+                }
+            },
             {
                 model: User,
                 attributes: ['username']
@@ -27,6 +35,14 @@ router.get('/:id', (req, res) => {
         },
         attributes: ['id', 'name', 'age','description', 'personality', 'status', 'created_at'],
         include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'cat_id', 'user_id', 'created_at'],
+                include: {
+                  model: User,
+                  attributes: ['username']
+                }
+            },
             {
                 model: User,
                 attributes: ['username']

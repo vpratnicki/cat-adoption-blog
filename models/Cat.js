@@ -63,10 +63,11 @@ module.exports = Cat;
 
 
 // uncomment below then copy/paste to test in insomnia
-//{ 
+// { 
 // "name": "Lynx",
 // "age": "3 months",
 // "description": "Lorem ipsum ...",
 // "personality": "Kind and loving",
-// "status": "available"	
+// "status": "available",
+// "user_id": 1	
 // }
