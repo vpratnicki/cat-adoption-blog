@@ -1,0 +1,62 @@
+<article class="cat">
+  {{!-- This is the top part divided into two  sections with pic on the left and bio point on the right   --}}
+  <div class="bio">
+    <div class="picture">
+        <div class="picture-holder">
+            {{cat.image_url}}
+        </div>
+
+    </div>
+    <div class="bio-info">
+        <h2 class="Name">{{cat.name}}</h2>
+        <h3 class="Age">{{cat.age}}</h3>
+        <h3 class="Status">{{cat.status}}</h3>
+        <h3 class="Personality">{{cat.personality}}</h3>
+    </div>
+  </div>
+
+
+  {{!-- This is the bottom part with cat description --}}
+   <div class="description">
+    <p class="text-description">{{cat.description}}</p>
+   </div>
+
+   <div class="meta">
+    by {{cat.user.username}} on {{cat.created_at}}
+    |
+    <a href="/cat/{{cat.id}}">{{cat.comments.length}} comment(s)</a>
+  </div> 
+
+</article>
+
+
+
+
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">add comment</button>
+  </div>
+</form>
+{{/if}}
+
+<div class="comments">
+  {{#each cat.comments}}
+  <section class="comment">
+    <div class="meta">
+      {{user.username}} on {{created_at}}
+    </div>
+    <div class="text">
+      {{comment_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
