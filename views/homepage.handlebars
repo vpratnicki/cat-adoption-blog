@@ -1,5 +1,6 @@
 <div class="container">
   {{!-- <div class="row"> --}}
+    {{#each cats}}
     <div class="card-column card-customization">
       <h4 class="card-title card-color">{{name}}</h4>
       <hr class="my-3" />
@@ -22,5 +23,6 @@
           {{comments.length}} comment(s)</small></p>
       <p><a href="/post/{{id}}">View Post »</a></p>
     </div>
+    {{/each}}
   {{!-- </div> --}}
 </div>

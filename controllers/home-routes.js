@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'cat_id', 'ctreated_at'],
+        attributes: ['id', 'comment_text', 'cat_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
@@ -30,6 +30,7 @@ router.get('/', (req, res) => {
     ]
   })
   .then(dbCatData => {
+    const cats = dbCatData.map(post => post.get({ plain: true }));
     // pass a single cat object into the homepage template
     res.render('homepage', { cats });
   })
