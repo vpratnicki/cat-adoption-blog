@@ -5,6 +5,7 @@ const { Cat } = require('../models');
 const catData = [
     {
         name: 'Waffles',
+        image_url: 'image',
         age: '3 months',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates placeat sit nesciunt fuga eius, assumenda dolores, sint dolorem minima adipisci tempore sapiente, vero repellat. Aperiam vel provident veniam praesentium.',  
         personality: 'kind',
