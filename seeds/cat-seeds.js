@@ -4,67 +4,64 @@ const { Cat } = require('../models');
 
 const catData = [
     {
-        name: 'Waffles',
-        image_url: 'image',
-        age: '3 months',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates placeat sit nesciunt fuga eius, assumenda dolores, sint dolorem minima adipisci tempore sapiente, vero repellat. Aperiam vel provident veniam praesentium.',  
-        personality: 'kind',
-        status: 'available for adoption',
+        name: 'Phil',
+        age: 'Young',
+        description: 'This young boy needs a forever, indoor only home with NO CATS. He loves humans but not fellow felines-possibly the reason he was put out of his home to survive alone. This guy has been making it on his own for some time now but he deserves more and he clearly wants it. He is a previous TNR.',  
+        personality: 'Kind',
+        status: 'Available',
         image_url: 'https://cataas.com/cat',
         user_id: '1'
     },
     {
-        name: 'Furry ball',
-        age: '5 years',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates placeat sit nesciunt fuga eius, assumenda dolores, sint dolorem minima adipisci tempore sapiente, vero repellat. Aperiam vel provident veniam praesentium.',  
-        personality: 'snuggly',
-        status: 'available for adoption',
+        name: 'Sweetpea',
+        age: 'Young',
+        description: "Whomever adopts this sweet, petite little girl is going to be the luckiest person! She loves car rides, she is totally used to vet offices, she uses the litter box, even with hurt legs, she eats good, she loves to cuddle and will zonk out like nobodys business right on top of you for hours",  
+        personality: 'Snuggly',
+        status: 'Available soon',
         image_url: 'https://cataas.com/cat',
         user_id: '2'
     },
     {
-        name: 'bookkeeper',
-        age: '10 years',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates placeat sit nesciunt fuga eius, assumenda dolores, sint dolorem minima adipisci tempore sapiente, vero repellat. Aperiam vel provident veniam praesentium.',  
-        personality: 'loving, playful',
-        status: 'adoption pending',
+        name: 'Sabrina',
+        age: 'Young',
+        description: 'Sabrina lives in a neighborhood where, sadly, many cats live outdoors and fend for themselves. She is a sweet, young, beautiful girl.',  
+        personality: 'Sweet',
+        status: 'Available soon',
         image_url: 'https://cataas.com/cat',
         user_id: '3'
     },
     {
-        name: 'Cupcake',
-        age: 'Young',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates placeat sit nesciunt fuga eius, assumenda dolores, sint dolorem minima adipisci tempore sapiente, vero repellat. Aperiam vel provident veniam praesentium.',  
-        personality: 'shy',
-        status: 'available for adoption',
+        name: 'Giorgio',
+        age: '12 weeks old',
+        description: 'It is tough on the streets-hard to trust anyone. He need time but is figuring it out. He likes to be pet and is even learning to play with toys.',  
+        personality: 'Shy, playful',
+        status: 'Available',
         user_id: '1'
     },
     {
-        name: 'Gunfire',
-        age: '2 months',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates placeat sit nesciunt fuga eius, assumenda dolores, sint dolorem minima adipisci tempore sapiente, vero repellat. Aperiam vel provident veniam praesentium.',  
-        personality: 'kind',
+        name: 'Diana',
+        age: '6 months',
+        description: 'She is stunning. The ear tufts and floof tails on this kid is amazing! Diana is searching for her forever home. She has known nothing but outdoor living all her lives. It would be so wonderful if she does not have to return to that life.',  
+        personality: 'Playful',
         status: 'available for adoption',
         user_id: '4'
     },
     {
-        name: 'Fluffy',
-        age: '5 years',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates placeat sit nesciunt fuga eius, assumenda dolores, sint dolorem minima adipisci tempore sapiente, vero repellat. Aperiam vel provident veniam praesentium.',  
-        personality: 'snuggly',
+        name: 'Prince Harry',
+        age: '6 months',
+        description: 'Welcome to The Cat Shack, Prince Harry. You sure look like royalty! Harry is searching for his forever, indoor only home.',  
+        personality: 'Snuggly',
         status: 'available for adoption',
         user_id: '2'
     },
     {
-        name: 'Granade',
-        age: '10 years',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates placeat sit nesciunt fuga eius, assumenda dolores, sint dolorem minima adipisci tempore sapiente, vero repellat. Aperiam vel provident veniam praesentium.',  
-        personality: 'loving, playful',
-        status: 'adoption pending',
+        name: 'Junebug',
+        age: '1 year',
+        description: 'She is a very petite and sweet girl who uses the litter box, is learning more and loving toys. She loves her cat tree and watching the birds out the window.',  
+        personality: 'loving, sweet',
+        status: 'Adoption pending',
         user_id: '2'
     }
-
-    
 ]
 
 const seedCats = () => Cat.bulkCreate(catData);
