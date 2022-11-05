@@ -2,18 +2,26 @@
   <a href="/dashboard"> &larr; Back to dashboard</a><br/>
   <br/>
   <h2>
-    Edit Post
+    Edit Cat
   </h2>
   <hr class="my-3">
 
   <form class="edit-post-form form">
     <div class="form-group">
-      <label for="post-title">Title</label>
-      <input type="text" class="form-control" id="post-title" name="post-title" value="{{post.title}}" />
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" value="{{name}}" />
     </div>
     <div>
-      <label for="post-text">Content</label>
-      <input id="post-text" class="form-control" name="post-text" value="{{post.post_text}}" />
+      <label for="description">Story</label>
+      <input id="description" class="form-control" name="description" value="{{description}}" />
+    </div>
+    <div>
+      <label for="age">Age</label>
+      <input id="age" class="form-control" name="age" value="{{age}}" />
+    </div>
+        <div>
+      <label for="personality">Personality</label>
+      <input id="personality" class="form-control" name="personality" value="{{personality}}" />
     </div>
     <div>
       by you on {{format_date post.created_at}} | {{post.comments.length}} {{format_plural "comment" post.comments.length}}
@@ -27,22 +35,5 @@
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-<script src="/javascript/imagehandler.js"></script>
 
-
-
-
-  {{!-- <div>
-    <h4>Step 1: User uploads file</h4>
-      File Input
-      <input type="file"  accept="image/*" name="image" id="file" />
-      <button onclick="handleUploadImage()">Upload Image</button>
-   </div>
-   <div>
-    <h4>Step 2: After upload, the JavaScript updates the value of this input</h4>
-    <p>Note: This input will get sent to the server and saved to the database.</p>
-    <p>The input could be hidden with CSS so that the user doesn't see the actual URL</p>
-    Image Url: <input name="image_url" id="image_url_input" disabled />
-    <img src="" id="display-image" />
-   </div> --}}
 
