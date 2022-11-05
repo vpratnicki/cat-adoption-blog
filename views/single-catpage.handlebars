@@ -1,18 +1,18 @@
-<div class="bg-light">
+
 <article class="cat">
   {{!-- This is the top part divided into two  sections with pic on the left and bio point on the right   --}}
   <div class="bio">
     <div class="picture">
         <div class="picture-holder">
-            <img src="{{image_url}}" alt="photo of {{name}}">
+            <img src="{{cat.image_url}}" class="cat-photo img-fluid" alt="photo of {{cat.name}}">
         </div>
 
     </div>
     <div class="bio-info">
-        <h2 class="Name">Meet {{cat.name}}</h2>
+        <h2 class="Name">Meet {{cat.name}}</h2><br/>
         <h3 class="Age">Age: {{cat.age}}</h3>
         <h3 class="Status">Status: {{cat.status}}</h3>
-        <h3 class="Personality">Personality: {{cat.personality}}</h3>
+        <h3 class="Personality">Personality: {{cat.personality}}</h3><br/>
     </div>
   </div>
 
@@ -25,17 +25,12 @@
     |
     {{cat.comments.length}} comment(s)<br/>
     <br/>
-        
-
+      
   </div> 
-
 </article>
 
 
-
-
 {{#if loggedIn}}
-
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
@@ -47,9 +42,9 @@
 </form>
 {{/if}}
 
-<h5>Comments about {{cat.name}}:</h5><br/>
-
 <div class="comments">
+  <h5>Comments about {{cat.name}}:</h5><br/>
+
   {{#each cat.comments}}
   <section class="comment">
     <div class="meta">
