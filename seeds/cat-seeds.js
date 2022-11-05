@@ -10,6 +10,7 @@ const catData = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates placeat sit nesciunt fuga eius, assumenda dolores, sint dolorem minima adipisci tempore sapiente, vero repellat. Aperiam vel provident veniam praesentium.',  
         personality: 'kind',
         status: 'available for adoption',
+        image_url: 'https://cataas.com/cat',
         user_id: '1'
     },
     {
@@ -18,6 +19,7 @@ const catData = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates placeat sit nesciunt fuga eius, assumenda dolores, sint dolorem minima adipisci tempore sapiente, vero repellat. Aperiam vel provident veniam praesentium.',  
         personality: 'snuggly',
         status: 'available for adoption',
+        image_url: 'https://cataas.com/cat',
         user_id: '2'
     },
     {
@@ -26,6 +28,7 @@ const catData = [
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates placeat sit nesciunt fuga eius, assumenda dolores, sint dolorem minima adipisci tempore sapiente, vero repellat. Aperiam vel provident veniam praesentium.',  
         personality: 'loving, playful',
         status: 'adoption pending',
+        image_url: 'https://cataas.com/cat',
         user_id: '3'
     },
     {
