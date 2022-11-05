@@ -9,23 +9,24 @@
 
     </div>
     <div class="bio-info">
-        <h2 class="Name">{{cat.name}}</h2>
-        <h3 class="Age">{{cat.age}}</h3>
-        <h3 class="Status">{{cat.status}}</h3>
-        <h3 class="Personality">{{cat.personality}}</h3>
+        <h2 class="Name">Meet {{cat.name}}</h2>
+        <h3 class="Age">Age: {{cat.age}}</h3>
+        <h3 class="Status">Status: {{cat.status}}</h3>
+        <h3 class="Personality">Personality: {{cat.personality}}</h3>
     </div>
   </div>
 
 
   {{!-- This is the bottom part with cat description --}}
    <div class="description">
-    <p class="text-description">{{cat.description}}</p>
-   </div>
-
-   <div class="meta">
-    by {{cat.user.username}} on {{cat.created_at}}
+    <p class="text-description">{{cat.description}}<br/>
+    <br/>
+    by {{cat.user.username}} on {{format_date cat.created_at}}
     |
-    <a href="/cat/{{cat.id}}">{{cat.comments.length}} comment(s)</a>
+    {{cat.comments.length}} comment(s)<br/>
+    <br/>
+        
+
   </div> 
 
 </article>
@@ -34,6 +35,7 @@
 
 
 {{#if loggedIn}}
+
 <form class="comment-form">
   <div>
     <textarea name="comment-body"></textarea>
@@ -45,11 +47,13 @@
 </form>
 {{/if}}
 
+<h5>Comments about {{cat.name}}:</h5><br/>
+
 <div class="comments">
   {{#each cat.comments}}
   <section class="comment">
     <div class="meta">
-      {{user.username}} on {{created_at}}
+      {{user.username}} on {{format_date created_at}}:
     </div>
     <div class="text">
       {{comment_text}}
