@@ -1,8 +1,11 @@
 async function editFormHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="post-title"]').value;
-    const post_text = document.querySelector('input[name="post-text"]').value;
+    const name = document.querySelector('input[name="name"]').value;
+    const description = document.querySelector('input[name="description"]').value;
+    const age = document.querySelector('input[name="age"]').value;
+    const personality = document.querySelector('input[name="personality"]').value;
+    const status = document.querySelector('input[name="status"]').value;
 
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
@@ -10,8 +13,11 @@ async function editFormHandler(event) {
     const response = await fetch(`/api/cats/${id}`, {
       method: 'PUT',
       body: JSON.stringify({
-        title,
-        post_text
+        name,
+        description,
+        age,
+        personality,
+        status
       }),
       headers: {
         'Content-Type': 'application/json'
