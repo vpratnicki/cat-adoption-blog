@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Cat, User, Comment } = require('../models');
 
 
-
 router.get('/', (req, res) => {
   Cat.findAll({
     attributes: [
@@ -43,6 +42,7 @@ router.get('/', (req, res) => {
   });
 });
 
+// single cat post route
 router.get('/cat/:id', (req, res) => {
   Cat.findOne({
     where: {
@@ -83,6 +83,7 @@ router.get('/cat/:id', (req, res) => {
     });
 });
 
+//login route
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');

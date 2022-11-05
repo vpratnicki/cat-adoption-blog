@@ -17,15 +17,23 @@
     <header>
       <div class="jumbotron p-4 jumbotron-fluid bg-dark" style="margin-bottom: 0px">
         <h1 class="display-3 page-title">The Cat Shack</h1>
-        <nav>
-        {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
       </div>
     </header>
+      <nav>
+        <ul class="nav justify-content-center nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a></li>
+        {{#if loggedIn}}
+          <li class="nav-item">
+            <button class="btn-no-style"><a class="nav-link" href="/dashboard">Dashboard</a></button></li>
+          <li class="nav-item">
+            <button id="logout" class="btn-no-style nav-link">Logout</button></li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a></li>
+        {{/if}}
+        </ul>
+      </nav>
 
     <main>
       {{{ body }}}
