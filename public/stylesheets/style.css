@@ -16,14 +16,22 @@
   }
   
   h1 {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Rock Salt', cursive;
+
   }
   
   h5 {
     color: var(--dark);
     }
-  
-  body {
+
+nav {
+    background: var(--secondary);
+}
+
+body {
+    background-image: url('../images/paw-prints.jpg');
+    background-size: cover;
+    /* background-position: right; */
     background-attachment: fixed;
     margin: 0;
     padding: 0;
@@ -32,23 +40,36 @@
     color: var(--dark);
     line-height: 1.5;
     font-size: 16px;
-  }
+}
+
+p {
+    margin-bottom: 10px;
+}
   
-  .card-customization {
+.card-customization {
     border-left-width: 0px;
     border-right-width: 0px;
-  }
+}
   
-  .page-title {
+.jumbotron-customization {
+    margin-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* .j-text {
+    color: var(--light);
+} */
+.page-title {
     color: var(--secondary);
     text-align: center;
     width: 100%;
     margin: 0;
-  }
-  
-  .card-color {
+}
+
+.card-color {
   background-color: var(--primary);
-  }
+}
   
   a {
     text-decoration: none;
@@ -167,10 +188,11 @@ form label {
 }
   
 footer {
+    background: var(--secondary);
     border-top: 1px solid #ccc;
     display: flex;
     justify-content: center;
-    padding: 1%;
+    padding: 3%;
     font-size: 110%;
 }
   
