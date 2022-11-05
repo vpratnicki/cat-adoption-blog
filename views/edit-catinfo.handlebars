@@ -1,39 +1,37 @@
-<html>
-  <head>
-    <script>
+<div class="jumbotron card-color">
+  <a href="/dashboard"> &larr; Back to dashboard</a><br/>
+  <br/>
+  <h2>
+    Edit Post
+  </h2>
+  <hr class="my-3">
 
-      function handleUploadImage() {
-        var myHeaders = new Headers();
-        myHeaders.append("Authorization", "Client-ID e7aa988d38f3ed4");
-        const fileElement = document.getElementById('file');
-        const file = fileElement.files[0];
-        var formdata = new FormData();
+  <form class="edit-post-form form">
+    <div class="form-group">
+      <label for="post-title">Title</label>
+      <input type="text" class="form-control" id="post-title" name="post-title" value="{{post.title}}" />
+    </div>
+    <div>
+      <label for="post-text">Content</label>
+      <input id="post-text" class="form-control" name="post-text" value="{{post.post_text}}" />
+    </div>
+    <div>
+      by you on {{format_date post.created_at}} | {{post.comments.length}} {{format_plural "comment" post.comments.length}}
+    </div>
+    <button type="submit" class="btn btn-light">Save post</button>
+    <button type="button" class="delete btn btn-light">Delete post</button>
+  </form>
 
-        formdata.append("image", file);
+  </div>
 
-        var requestOptions = {
-          method: 'POST',
-          headers: myHeaders,
-          body: formdata,
-          redirect: 'follow'
-        };
 
-        fetch("https://api.imgur.com/3/image", requestOptions)
-          .then(response => response.json())
-          .then(result => {
-            const link = result.data.link;
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
 
-            document.getElementById('image_url_input').value = link;
-            document.getElementById('display-image').src = link;
-            console.log(result.data.link);
-          })
-          .catch(error => console.log('error', error));
-          
-      }
-    </script>
-  </head>
-<body>
-  <div>
+
+
+
+  {{!-- <div>
     <h4>Step 1: User uploads file</h4>
       File Input
       <input type="file"  accept="image/*" name="image" id="file" />
@@ -45,9 +43,5 @@
     <p>The input could be hidden with CSS so that the user doesn't see the actual URL</p>
     Image Url: <input name="image_url" id="image_url_input" disabled />
     <img src="" id="display-image" />
-   </div>
-</body>
+   </div> --}}
 
-</html>
-
-{{!-- <img src="{{ image_url }}"> --}}

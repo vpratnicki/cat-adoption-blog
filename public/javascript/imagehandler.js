@@ -1,7 +1,7 @@
 function handleUploadImage() {
   var myHeaders = new Headers();
   myHeaders.append("Authorization", "Client-ID e7aa988d38f3ed4");
-  const fileElement = document.getElementById('file');
+  const fileElement = document.getElementById("file");
   const file = fileElement.files[0];
   var formdata = new FormData();
 
@@ -11,18 +11,17 @@ function handleUploadImage() {
     method: 'POST',
     headers: myHeaders,
     body: formdata,
-    redirect: 'follow'
+    redirect: 'follow',
   };
 
   fetch("https://api.imgur.com/3/image", requestOptions)
-    .then(response => response.json())
-    .then(result => {
+    .then((response) => response.json())
+    .then((result) => {
       const link = result.data.link;
 
-      document.getElementById('image_url_input').value = link;
-      document.getElementById('display-image').src = link;
+      document.getElementById("image_url_input").value = link;
+      document.getElementById("display-image").src = link;
       console.log(result.data.link);
     })
-    .catch(error => console.log('error', error));
-    
+    .catch((error) => console.log("error", error));
 }
