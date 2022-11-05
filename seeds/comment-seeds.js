@@ -2,22 +2,22 @@ const { Comment } = require('../models');
 
 const commentData = [
     {
-        comment_text: 'The cat was chasing the mouse if it smells like fish eat as much as you wish or cats are the world for waffles.',
+        comment_text: 'Poor Phil! I hope he finds a home soon!',
         user_id: '1',
         cat_id: '1'
     },
     {
-        comment_text: 'Dream about hunting birds run outside as soon as door open yet sit on the laptop and try to hold own back foot to clean it but foot reflexively kicks you in face.',
+        comment_text: "I would love to meet her! I'm messaging you now.",
         user_id: '2',
         cat_id: '2'
     },
     {
-        comment_text: 'Catch small lizards, bring them into house, then unable to find them on carpet meow meow.',
+        comment_text: 'It breaks my heart that people are so heartless.',
         user_id: '3',
         cat_id: '3'
     },
     {
-        comment_text: 'Eat as much as you wish or cats are the world for waffles.',
+        comment_text: 'Do you think he would do well with other cats?',
         user_id: '4',
         cat_id: '4'
     }
