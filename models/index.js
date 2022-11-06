@@ -7,6 +7,14 @@ User.hasMany(Cat, {
     foreignKey: 'user_id'
 });
 
+User.hasMany(Comment, {
+    foreignKey: 'user_id'
+});
+
+Cat.hasMany(Comment, {
+    foreignKey: 'cat_id'
+});
+
 Cat.belongsTo(User, {
     foreignKey: 'user_id',
 });
@@ -16,14 +24,6 @@ Comment.belongsTo(User, {
 });
 
 Comment.belongsTo(Cat, {
-    foreignKey: 'cat_id'
-});
-
-User.hasMany(Comment, {
-    foreignKey: 'user_id'
-});
-
-Cat.hasMany(Comment, {
     foreignKey: 'cat_id'
 });
 

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
 
+// get all comments
 router.get('/', (req, res) => {
     Comment.findAll()
         .then(dbCommentData => res.json(dbCommentData))
@@ -10,6 +11,7 @@ router.get('/', (req, res) => {
         });
 });
 
+// create comments
 router.post('/', (req, res) => {
     // expects this {comment_text: "This is first the comment", user_id: 1, cat_id: 2}
     if (req.session) {
