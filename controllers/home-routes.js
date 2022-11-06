@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
       'description',
       'personality',
       'status',
+      'image_url',
       'created_at'
     ],
     include: [
