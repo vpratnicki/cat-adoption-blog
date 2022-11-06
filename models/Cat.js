@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 
-// create Catt model
+// create Cat model
 class Cat extends Model {}
 
 // create fields/columns for Cat model
@@ -37,7 +37,7 @@ Cat.init(
         }, 
         image_url: {
             type: DataTypes.STRING,
-            // allowNull: false,
+            allowNull: true,
             validate: {
               isURL: true
             }
@@ -46,6 +46,13 @@ Cat.init(
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
+                key: 'id'
+            }
+        },
+        cat_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'comment',
                 key: 'id'
             }
         }
@@ -57,7 +64,6 @@ Cat.init(
         modelName: 'cat'
     }
 );
-
 
 module.exports = Cat;
 

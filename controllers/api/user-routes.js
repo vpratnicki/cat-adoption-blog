@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
         });
 });
 
+// find user by id
 router.get('/:id', (req, res) => {
     User.findOne({
         attributes: { exclude: ['password'] },
@@ -22,14 +23,14 @@ router.get('/:id', (req, res) => {
         include: [
             {
               model: Cat,
-              attributes: ['id', 'name', 'age', 'created_at']
+              attributes: ['id', 'name', 'age','description', 'personality', 'status', 'created_at']
             },
             {
                 model: Comment,
                 attributes: ['id', 'comment_text', 'created_at'],
                 include: {
                   model: Cat,
-                  attributes: ['name']
+                  attributes: ['name'],
                 }
             }
         ]
@@ -47,6 +48,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
+// create new user
 router.post('/', (req, res) => {
     // expects {username: 'Svetlana', email: 'svetlana@gmail.com', password: 'password1234'}
     User.create({
@@ -69,6 +71,7 @@ router.post('/', (req, res) => {
         });
 });
 
+// login route
 router.post('/login', (req, res) => {
     // expects {email: 'lernantino@gmail.com', password: 'password1234'}
     User.findOne({
@@ -98,6 +101,7 @@ router.post('/login', (req, res) => {
     });
 });
 
+//logout route
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {
@@ -109,6 +113,7 @@ router.post('/logout', (req, res) => {
     }
 });
 
+// Update user
 router.put('/:id', (req, res) => {
     // expects {username: 'Svetlana', email: 'svetlana@gmail.com', password: 'password1234'}
 
