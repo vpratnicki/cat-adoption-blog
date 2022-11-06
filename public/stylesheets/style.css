@@ -214,12 +214,12 @@ footer {
 }
 
 .cat-photo {
-    height: auto;
-    max-width: 15%;
+    /* height: auto;
+    max-width: 15%; */
     border-radius: 10px;
 
-    /* width: auto;
-    max-height: 5%; */
+    width: auto;
+    max-height: 300px;
 }
 
 .picture-holder img {
