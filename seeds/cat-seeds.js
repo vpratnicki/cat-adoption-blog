@@ -36,6 +36,7 @@ const catData = [
         description: 'It is tough on the streets-hard to trust anyone. He need time but is figuring it out. He likes to be pet and is even learning to play with toys.',  
         personality: 'Shy, playful',
         status: 'Available',
+        image_url: 'https://cataas.com/cat',
         user_id: '1'
     },
     {
@@ -44,6 +45,7 @@ const catData = [
         description: 'She is stunning. The ear tufts and floof tails on this kid is amazing! Diana is searching for her forever home. She has known nothing but outdoor living all her lives. It would be so wonderful if she does not have to return to that life.',  
         personality: 'Playful',
         status: 'available for adoption',
+        image_url: 'https://cataas.com/cat',
         user_id: '4'
     },
     {
@@ -52,6 +54,7 @@ const catData = [
         description: 'Welcome to The Cat Shack, Prince Harry. You sure look like royalty! Harry is searching for his forever, indoor only home.',  
         personality: 'Snuggly',
         status: 'available for adoption',
+        image_url: 'https://cataas.com/cat',
         user_id: '2'
     },
     {
@@ -60,6 +63,7 @@ const catData = [
         description: 'She is a very petite and sweet girl who uses the litter box, is learning more and loving toys. She loves her cat tree and watching the birds out the window.',  
         personality: 'loving, sweet',
         status: 'Adoption pending',
+        image_url: 'https://cataas.com/cat',
         user_id: '2'
     }
 ]
