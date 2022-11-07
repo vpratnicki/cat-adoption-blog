@@ -25,6 +25,12 @@ const userData = [
         username: 'Charles',
 		email: 'charles@icloud.com',
 		password: 'yiijloju678'
+    },
+    {
+        username: 'DawnMarie',
+        email: 'dawn@gmail.com',
+        password: 'dawn',
+        isAdmin: true
     }
 ]
 
