@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
     ]
   })
   .then(dbCatData => {
-    const cats = dbCatData.map(post => post.get({ plain: true }));
+    const cats = dbCatData.map(cat => cat.get({ plain: true }));
     // pass a single cat object into the homepage template
     res.render('homepage', {
       cats,
