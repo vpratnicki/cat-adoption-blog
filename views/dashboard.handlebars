@@ -29,11 +29,14 @@
 {{#if cats.length}}
 <section>
   <h2>Your Posts</h2>
+  <br/>
   <div class="row">
       <div class="card-columns">
     {{#each cats}}
         <div class="card card-customization">
+          {{#if image_url.length}}
           <img src="{{image_url}}" class="card-img-top" alt="photo of {{name}}">
+          {{/if}}
           <div class="card-body card-color2 drop-shadow">
            <h4 class="card-title"><a href="/cat/{{id}}">{{name}}</a></h4>
             <hr class="my-3" />
@@ -44,6 +47,7 @@
             <small class="text-muted">
               Added by {{user.username}} on {{format_date created_at}} | {{comments.length}} comment(s)</small>
               </p>
+               <a href="/dashboard/edit/{{id}}" class="edit-link">Edit post »</a>
           </div></a>
         </div>
     {{/each}}
@@ -51,7 +55,6 @@
 </section>
 {{/if}}
 
-  
   <script src="/javascript/imagehandler.js"></script>
   <script src="/javascript/add-post.js"></script>
 
