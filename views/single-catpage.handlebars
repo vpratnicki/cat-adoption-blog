@@ -1,11 +1,13 @@
 
 <article class="cat">
   {{!-- This is the top part divided into two  sections with pic on the left and bio point on the right   --}}
+  {{#if image_url.length}}
   <div class="bio">
     <div class="picture">
         <div class="picture-holder">
             <img src="{{cat.image_url}}" class="cat-photo img-fluid" alt="photo of {{cat.name}}">
         </div>
+   {{/if}}
 
     </div>
     <div class="bio-info">
@@ -23,7 +25,7 @@
     <br/>
     by {{cat.user.username}} on {{format_date cat.created_at}}
     |
-    {{cat.comments.length}} comment(s)<br/>
+    {{cat.comments.length}} {{format_plural "comment" comments.length}}<br/>
     <br/>
       
   </div> 
