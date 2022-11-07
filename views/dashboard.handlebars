@@ -45,7 +45,7 @@
             {{description}}<br/>
             <br/>
             <small class="text-muted">
-              Added by {{user.username}} on {{format_date created_at}} | {{comments.length}} comment(s)</small>
+              Added by {{user.username}} on {{format_date created_at}} | {{comments.length}} {{format_plural "comment" comments.length}}</small>
               </p>
                <a href="/dashboard/edit/{{id}}" class="edit-link">Edit post »</a>
           </div></a>
