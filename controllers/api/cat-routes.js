@@ -5,7 +5,7 @@ const { Cat, User, Comment } = require('../../models');
 router.get('/', (req, res) => {
     Cat.findAll({
         attributes: ['id', 'name', 'age','description', 'personality', 'status', 'created_at', 'image_url'],
-        order: [['created_at', 'DESC']],
+        // order: [['created_at', 'DESC']],
         include: [
             {
                 model: Comment,
@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'image_url', 'name', 'age','description', 'personality', 'status', 'created_at'],
+        attributes: ['id', 'image_url', 'name', 'age', 'description', 'personality', 'status', 'created_at'],
         include: [
             {
                 model: Comment,
@@ -71,7 +71,7 @@ router.post('/', (req, res) => {
         personality: req.body.personality,
         status: req.body.status,
         image_url: req.body.image_url,
-        user_id: req.body.user_id,
+        user_id: req.session.user_id,
         comment_id: req.body.comment_id
     })
         .then(dbCatData => res.json(dbCatData))
@@ -90,7 +90,7 @@ router.put('/:id', (req, res) => {
             personality: req.body.personality,
             status: req.body.status,
             image_url: req.body.image_url,
-            user_id: req.body.user_id,
+            user_id: req.session.user_id,
             comment_id: req.body.comment_id
         },
         {

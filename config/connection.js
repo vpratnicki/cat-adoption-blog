@@ -1,9 +1,4 @@
-// // import the sequelize constructor from the library
-// const Sequelize = require('sequelize');
-
-// require('dotenv').config();
-
-// // create connection to our database, pass in your MYSQL info for username and password
+// create connection to our database, pass in your MYSQL info for username and password
 // let sequelize;
 
 // if (process.env.JAWSDB_URL) {
@@ -22,9 +17,6 @@
 // }
 
 // module.exports = sequelize;
-
-
-
 
 const Sequelize = require('sequelize');
 

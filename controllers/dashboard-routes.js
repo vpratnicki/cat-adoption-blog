@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 const { Cat, User, Comment } = require('../models');
 
 
-router.get('/', withAuth, (req, res) => {
+router.get('/', (req, res) => {
   Cat.findAll({
     where: {
       // use the ID from the session
@@ -22,11 +22,13 @@ router.get('/', withAuth, (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'cat_id', 'created_at'],
-        include: {
+        attributes: ['id', 'comment_text', 'cat_id', 'user_id', 'created_at'],
+        include: [
+          {
           model: User,
           attributes: ['username']
         }
+      ]
       },
       {
         model: User,
@@ -36,7 +38,7 @@ router.get('/', withAuth, (req, res) => {
   })
     .then(dbCatData => {
       // serialize data before passing to template
-      const cats = dbCatData.map(post => post.get({ plain: true }));
+      const cats = dbCatData.map(cat => cat.get({ plain: true }));
       res.render('dashboard', { cats, loggedIn: true });
     })
     .catch(err => {
@@ -45,7 +47,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get('/edit/:id', (req, res) => {
   Cat.findByPk(req.params.id, {
     attributes: [
       'id',

@@ -18,7 +18,9 @@
 
         {{#each cats}}
         <div class="card card-customization">
+          {{#if image_url.length}}
           <img src="{{image_url}}" class="card-img-top" alt="photo of {{name}}">
+          {{/if}}
           <div class="card-body card-color2 drop-shadow">
            <h4 class="card-title"><a href="/cat/{{id}}">{{name}}</a></h4>
             <hr class="my-3" />
