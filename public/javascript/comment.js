@@ -1,3 +1,7 @@
+var quill = new Quill('#editor', {
+    theme: 'snow'
+  });
+
 async function commentFormHandler(event) {
     event.preventDefault();
 
