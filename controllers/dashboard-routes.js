@@ -2,7 +2,7 @@ const router = require('express').Router();
 // const withAuth = require('../utils/auth');
 const { Cat, User, Comment } = require('../models');
 
-
+// gets all cat posts based on user_id
 router.get('/', (req, res) => {
   Cat.findAll({
     where: {
@@ -47,6 +47,7 @@ router.get('/', (req, res) => {
     });
 });
 
+
 router.get('/edit/:id', (req, res) => {
   Cat.findByPk(req.params.id, {
     attributes: [
@@ -90,6 +91,5 @@ router.get('/edit/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-
 
 module.exports = router;

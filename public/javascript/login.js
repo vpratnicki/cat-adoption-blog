@@ -9,7 +9,7 @@ async function loginFormHandler(event) {
             method: 'post',
             body: JSON.stringify({
                 email,
-                password
+                password            
             }),
             headers: { 'Content-Type': 'application/json' }
         });
@@ -41,7 +41,6 @@ async function signupFormHandler(event) {
         });
 
         if (response.ok) {
-            // console.log(username);
             document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
