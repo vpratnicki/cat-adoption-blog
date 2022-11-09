@@ -1,6 +1,20 @@
 <section class="jumbotron card-color">
   <h2>Create New Post</h2>
 
+      <div>
+        <h4>Step 1: User uploads file</h4>
+        File Input
+        <input type="file" accept="image/*" name="image" id="file" />
+        <button onclick="handleUploadImage()">Upload Image</button>
+      </div>
+      <div>
+        <h4>Step 2: After upload, the JavaScript updates the value of this input</h4>
+        <p>Note: This input will get sent to the server and saved to the database.</p>
+        <p>The input could be hidden with CSS so that the user doesn't see the actual URL</p>
+        Image Url: <input name="image_url" id="image_url_input" disabled />
+        <img src="" id="display-image" />
+      </div>
+
   <form class="new-post-form form">
     <div class="form-group">
       <label for="name">Cat Name</label>
@@ -58,16 +72,4 @@
   <script src="/javascript/imagehandler.js"></script>
   <script src="/javascript/add-post.js"></script>
 
-     {{!-- <div>
-    <h4>Step 1: User uploads file</h4>
-      File Input
-      <input type="file"  accept="image/*" name="image" id="file" />
-      <button onclick="handleUploadImage()">Upload Image</button>
-   </div>
-   <div>
-    <h4>Step 2: After upload, the JavaScript updates the value of this input</h4>
-    <p>Note: This input will get sent to the server and saved to the database.</p>
-    <p>The input could be hidden with CSS so that the user doesn't see the actual URL</p>
-    Image Url: <input name="image_url" id="image_url_input" disabled />
-    <img src="" id="display-image" />
-   </div> --}}
+ 
