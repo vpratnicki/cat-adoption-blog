@@ -6,6 +6,7 @@ async function newFormHandler(event) {
     const age = document.querySelector('input[name="age"]').value;
     const personality = document.querySelector('input[name="personality"]').value;
     const status = document.querySelector('input[name="status"]').value;
+    const image_url = document.querySelector('#image_url_input').value;
 
     const response = await fetch(`/api/cats`, {
       method: 'POST',
@@ -14,7 +15,8 @@ async function newFormHandler(event) {
         description,
         age,
         personality,
-        status
+        status,
+        image_url
       }),
       headers: {
         'Content-Type': 'application/json'
