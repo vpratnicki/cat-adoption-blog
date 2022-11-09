@@ -1,7 +1,11 @@
+var quill = new Quill('#editor', {
+    theme: 'snow'
+  });
+
 async function commentFormHandler(event) {
     event.preventDefault();
 
-    const comment_text = document.querySelector('textarea[name="comment-body"]').value.trim();
+    const comment_text = quill.root.innerHTML;
     const cat_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];
