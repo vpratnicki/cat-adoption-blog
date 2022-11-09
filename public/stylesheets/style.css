@@ -139,6 +139,36 @@ textarea {
     min-width: 100%;
     min-height: 100px;
 }
+
+/* .ql-container {
+    height: min-content;
+    margin-bottom: 2%;
+} */
+
+.ql-toolbar {
+    background-color: #cfb59c;
+    margin-bottom: 0%;
+    margin-top: 4%;
+}
+
+.commentBtn {
+    margin-top: 2%;
+}
+
+.element {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: white;
+    height: min-content;
+    margin-bottom: 2%;
+}
+
+.comment-lement {
+    padding-bottom: 50px;
+}
   
 form > div {
     margin-bottom: 2%;
