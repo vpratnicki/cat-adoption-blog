@@ -101,6 +101,13 @@ p {
     border-radius: 5px;
   }
   
+  .upload-image {
+    padding: 0.2%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    background-color: #cfb59c
+  }
+
   button:hover {
     background-color: var(--secondary);
   }
@@ -168,6 +175,11 @@ textarea {
 
 .comment-lement {
     padding-bottom: 50px;
+}
+
+#image_url_input {
+    background-color: white;
+    margin-bottom: 5%;
 }
   
 form > div {
