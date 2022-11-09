@@ -32,9 +32,11 @@ router.get('/', (req, res) => {
   .then(dbCatData => {
     const cats = dbCatData.map(cat => cat.get({ plain: true }));
     // pass a single cat object into the homepage template
+    console.log(req.session)
     res.render('homepage', {
       cats,
-      loggedIn: req.session.loggedIn
+      loggedIn: req.session.loggedIn,
+      isAdmin: req.session.isAdmin
     });
   })
   .catch(err => {

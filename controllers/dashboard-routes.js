@@ -39,7 +39,7 @@ router.get('/', (req, res) => {
     .then(dbCatData => {
       // serialize data before passing to template
       const cats = dbCatData.map(cat => cat.get({ plain: true }));
-      res.render('dashboard', { cats, loggedIn: true });
+      res.render('dashboard', { cats, loggedIn: req.session.loggedIn, isAdmin: req.session.isAdmin });
     })
     .catch(err => {
       console.log(err);
