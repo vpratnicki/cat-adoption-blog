@@ -21,7 +21,7 @@
 
   {{!-- This is the bottom part with cat description --}}
    <div class="description">
-    <p class="text-description">{{cat.description}}<br/>
+    <p class="text-description">{{{cat.description}}}<br/>
     <br/>
     by {{cat.user.username}} on {{format_date cat.created_at}}
     |
@@ -34,12 +34,12 @@
 
 {{#if loggedIn}}
 <form class="comment-form">
-   <div id="editor" class="element">
+   <div id="editor" class="element comment-lement">
     <textarea name="comment-body"> Comment Here </textarea>
   </div>
 
   <div>
-    <button type="submit">add comment</button>
+    <button type="submit" class="commentBtn">add comment</button>
   </div>
 </form>
 {{/if}}

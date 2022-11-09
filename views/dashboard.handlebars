@@ -20,7 +20,7 @@
       <label for="name">Cat Name</label>
       <input type="text" class="form-control" id="name" placeholder="Enter cats name" name="name" />
     </div>
-    <div>
+    <div id="editor" class="element">
       <label for="description">Story</label>
       <textarea id="description" name="description" placeholder="Enter the cats story/decription"></textarea>
     </div>
@@ -56,7 +56,7 @@
             <hr class="my-3" />
             <p class="card-text">
             <h5>{{name}}'s story:</h5>
-            {{description}}<br/>
+            {{{description}}}<br/>
             <br/>
             <small class="text-muted">
               Added by {{user.username}} on {{format_date created_at}} | {{comments.length}} {{format_plural "comment" comments.length}}</small>
@@ -69,6 +69,7 @@
 </section>
 {{/if}}
 
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
   <script src="/javascript/imagehandler.js"></script>
   <script src="/javascript/add-post.js"></script>
 

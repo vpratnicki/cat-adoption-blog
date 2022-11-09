@@ -1,8 +1,12 @@
+var quill = new Quill('#editor', {
+  theme: 'snow'
+});
+
 async function newFormHandler(event) {
     event.preventDefault();
   
     const name = document.querySelector('input[name="name"]').value;
-    const description = document.querySelector('textarea[name="description"]').value;
+    const description = quill.root.innerHTML;;
     const age = document.querySelector('input[name="age"]').value;
     const personality = document.querySelector('input[name="personality"]').value;
     const status = document.querySelector('input[name="status"]').value;
