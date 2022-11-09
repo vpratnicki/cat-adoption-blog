@@ -73,30 +73,40 @@ router.post('/', (req, res) => {
 
 // login route
 router.post('/login', (req, res) => {
-    // expects {email: 'lernantino@gmail.com', password: 'password1234'}
     User.findOne({
         where: {
             email: req.body.email
         }
     }).then(dbUserData => {
+        console.log(dbUserData);
         if (!dbUserData) {
+            console.log('cant find user')
             res.status(400).json({ message: 'No user with that email address!' });
             return;
         }
 
         const validPassword = dbUserData.checkPassword(req.body.password);
+        console.log(validPassword)
 
         if (!validPassword) {
+            console.log('password is wrong-ish')
             res.status(400).json({ message: 'Incorrect password!' });
             return;
         }
 
-        req.session.save(() => {
-            req.session.user_id = dbUserData.id;
-            req.session.username = dbUserData.username;
-            req.session.loggedIn = true;
+        let userData = dbUserData.get({ plain: true });
 
-            res.json({ user: dbUserData, message: 'You are now logged in!' });
+        console.log('lets roll')
+
+        console.log('----------------------------------------')
+        console.log(userData)
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.username = userData.username;
+            req.session.loggedIn = true;
+            req.session.isAdmin = userData.isAdmin;
+            
+            res.json({ user: userData, message: 'You are now logged in!' });
         });
     });
 });

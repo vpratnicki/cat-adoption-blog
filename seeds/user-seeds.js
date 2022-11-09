@@ -25,9 +25,19 @@ const userData = [
         username: 'Charles',
 		email: 'charles@icloud.com',
 		password: 'yiijloju678'
+    },
+    {
+        username: 'DawnMarie',
+        email: 'dawn@gmail.com',
+        password: 'dawn',
+        isAdmin: true
     }
 ]
 
-const seedUsers = () => User.bulkCreate(userData);
+const seedUsers = async () => {  
+    for (const u of userData) {
+        await User.create(u)
+    }
+}
 
 module.exports = seedUsers;
