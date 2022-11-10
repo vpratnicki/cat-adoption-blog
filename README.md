@@ -41,6 +41,6 @@ Navigate to the login page and create an account by entering a unique username, 
 ## Website
 
 
-## Aditional Information:
+## Additional Information:
 - Github:[github.com/vpratnicki](vpratnicki), [github.com/EtaSveta](EtaSveta), [github.com/DiegoServe](DiegoServe)
 - Email: diego.conserve@gmail.com 
