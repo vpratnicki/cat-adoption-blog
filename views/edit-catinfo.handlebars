@@ -1,0 +1,43 @@
+<div class="jumbotron card-color">
+  <a href="/dashboard"> &larr; Back to dashboard</a><br/>
+  <br/>
+  <h2>
+    Edit Cat
+  </h2>
+  <hr class="my-3">
+
+  <form class="edit-post-form form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" value="{{cat.name}}" />
+    </div>
+    <div>
+      <label for="description">Story</label>
+      <input id="description" class="form-control" name="description" value="{{cat.description}}" />
+    </div>
+    <div>
+      <label for="age">Age</label>
+      <input id="age" class="form-control" name="age" value="{{cat.age}}" />
+    </div>
+        <div>
+      <label for="personality">Personality</label>
+      <input id="personality" class="form-control" name="personality" value="{{cat.personality}}" />
+    </div>
+    <div>
+      <label for="status">Status</label>
+      <input id="status" class="form-control" name="status" value="{{cat.status}}" />
+    </div>
+    <div>
+      by you on {{format_date cat.created_at}} | {{cat.comments.length}} {{format_plural "comment" cat.comments.length}}
+    </div>
+    <button type="submit" class="btn btn-light">Save post</button>
+    <button type="button" class="delete btn btn-light">Delete post</button>
+  </form>
+
+  </div>
+
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
+
+

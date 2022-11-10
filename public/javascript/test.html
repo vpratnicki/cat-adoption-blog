@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <script>
+
+      function handleUploadImage() {
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Client-ID e7aa988d38f3ed4");
+        const fileElement = document.getElementById('file');
+        const file = fileElement.files[0];
+        var formdata = new FormData();
+
+        formdata.append("image", file);
+
+        var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: formdata,
+          redirect: 'follow'
+        };
+
+        fetch("https://api.imgur.com/3/image", requestOptions)
+          .then(response => response.json())
+          .then(result => {
+            const link = result.data.link;
+
+            document.getElementById('image_url_input').value = link;
+            document.getElementById('display-image').src = link;
+            console.log(result.data.link);
+          })
+          .catch(error => console.log('error', error));
+          
+      }
+    </script>
+  </head>
+<body>
+  <div>
+    <h4>Step 1: User uploads file</h4>
+      File Input
+      <input type="file"  accept="image/*" name="image" id="file" />
+      <button onclick="handleUploadImage()">Upload Image</button>
+   </div>
+   <div>
+    <h4>Step 2: After upload, the JavaScript updates the value of this input</h4>
+    <p>Note: This input will get sent to the server and saved to the database.</p>
+    <p>The input could be hidden with CSS so that the user doesn't see the actual URL</p>
+    Image Url: <input name="image_url" id="image_url_input" disabled />
+    <img src="" id="display-image" />
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="jumbotron jumbotron-customization card-color drop-shadow">
+    <h2>
+      Welcome to the Cat Shack!
+    </h2>
+    <hr class="my-3" />
+    <p>
+      Looking for the purr-fect addition to your family? Adopt a kitty from the
+      Peninsula Colony Cat Shack!</p>
+      <p>Dawn Marie is a long time care
+      taker of the Essex area cat colonies and finds homes for as many as she
+      can. Help make room for the next kitty at the Cat Shack by adopting today!
+    </p>
+    <p>If you’d like to meet a fur baby, contact <a href="https://www.facebook.com/dawn.scheuermancannella/">Dawn Marie Peninsula Colony Cats</a>.</p>
+  </div>
+
+  <div class="row">
+      <div class="card-columns">
+
+        {{#each cats}}
+        <div class="card card-customization">
+          {{#if image_url.length}}
+          <img src="{{image_url}}" class="card-img-top" alt="photo of {{name}}">
+          {{/if}}
+          <div class="card-body card-color2 drop-shadow">
+           <h4 class="card-title"><a href="/cat/{{id}}">{{name}}</a></h4>
+            <hr class="my-3" />
+            <p class="card-text">
+            <h5>{{name}}'s story:</h5>
+            {{description}}<br/>
+            <br/>
+            <small class="text-muted">
+              Added by {{user.username}} on {{format_date created_at}} | {{comments.length}} {{format_plural "comment" comments.length}}</small>
+              </p>
+          </div></a>
+        </div>
+        {{/each}}
+      </div>
+  </div>
+</div>

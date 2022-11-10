@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS cat_blog_db;
+
+CREATE DATABASE cat_blog_db;
