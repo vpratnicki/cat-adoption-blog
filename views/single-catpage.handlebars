@@ -25,7 +25,7 @@
     <br/>
     by {{cat.user.username}} on {{format_date cat.created_at}}
     |
-    {{cat.comments.length}} {{format_plural "comment" comments.length}}<br/>
+    {{cat.comments.length}} {{format_plural "comment" cat.comments.length}}<br/>
     <br/>
       
   </div> 
@@ -35,7 +35,7 @@
 {{#if loggedIn}}
 <form class="comment-form">
    <div id="editor" class="element comment-lement">
-    <textarea name="comment-body"> Comment Here </textarea>
+    <textarea name="comment-body">Place comment here</textarea>
   </div>
 
   <div>
