@@ -81,7 +81,8 @@ router.get('/edit/:id', (req, res) => {
         
         res.render('edit-catinfo', {
           cat,
-          loggedIn: true
+          loggedIn: req.session.loggedIn,
+          isAdmin: req.session.isAdmin
         });
       } else {
         res.status(404).end();
