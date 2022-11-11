@@ -1,4 +1,4 @@
-# Cat Adpotion Blog
+# The Cat Shack
 
 ## Licensing:
 [![license](https://img.shields.io/badge/license-none-blue)](https://shields.io)
@@ -14,7 +14,7 @@
 
 
 ## Description
-Adopting a cat can be very rewarding!  The Cat Shack is a an application for anyone to use if they are interested in adopting a cat today.  Individuals can view and comment on fully descriptive profiles of a variety of rescue cats from all over the region.  Each cat profile contains a picture of themselves, their age, their adoption status, personality type, as well as a quick bio about themselves.
+Adopting a cat can be very rewarding!  The Cat Shack is a an application for anyone to use if they are interested in adopting a cat today.  Individuals can view and comment on fully descriptive profiles of a variety of rescue cats from the Balitmore County area.  Each cat profile contains a picture of themselves, their age, their adoption status, personality type, as well as a quick bio about themselves.
 
 
 ## Usage
