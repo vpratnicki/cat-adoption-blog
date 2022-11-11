@@ -6,34 +6,28 @@
     --dark: #272f32;
   }
   
-  * {
+* {
     box-sizing: border-box;
-  }
+}
   
-  main {
+main {
     flex: 1;
     padding: 2% 4%;
-  }
+}
   
-  h1 {
+h1 {
   font-family: 'Rock Salt', cursive;
-
-  }
+}
   
-  h5 {
+h5 {
     color: var(--dark);
-    }
+}
 
 nav {
     background: var(--secondary);
 }
 
 body {
-    /* background-image: url("https://images.unsplash.com/photo-1574063413132-354db9f190fd?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2F0fHx8fHx8MTY2NzY2OTc5OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600"); */
-    /* background-image: url('../images/paw-prints.jpg'); */
-    background-size: cover;
-    /* background-position: right; */
-    background-attachment: fixed;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
@@ -50,7 +44,6 @@ p {
 .card-customization {
     border: 0px;
     display: inline-block;
-
 }
   
 .jumbotron-customization {
@@ -59,9 +52,6 @@ p {
     padding-bottom: 20px;
 }
 
-/* .j-text {
-    color: var(--light);
-} */
 .page-title {
     color: var(--secondary);
     text-align: center;
@@ -76,21 +66,23 @@ p {
 .card-color2 {
     background-color: var(--secondary);
 }
-  a {
+
+a {
     text-decoration: none;
     color: #225ca3;
     font-weight: bold;
     transition: color .1s;
-  }
+}
+
+a:hover {
+    color: #3486eb;
+}
   
 .drop-shadow {
     box-shadow: 5px 5px 10px rgba(39, 44, 50, 0.10);
 }
-  a:hover {
-    color: #3486eb;
-  }
   
-  button {
+button {
     background-color: var(--primary);
     color:var(--dark);
     border: 0;
@@ -99,20 +91,20 @@ p {
     transition: background-color .1s;
     cursor: pointer;
     border-radius: 5px;
-  }
+}
   
-  .upload-image {
+.upload-image {
     padding: 0.2%;
     margin-bottom: 1%;
     margin-top: 1%;
     background-color: #cfb59c
-  }
+}
 
-  button:hover {
+button:hover {
     background-color: var(--secondary);
-  }
+}
   
-  .btn-no-style {
+.btn-no-style {
     background: none;
     border: none;
     cursor: pointer;
@@ -122,13 +114,12 @@ p {
     font-weight: bold;
     transition: color .1s;
     margin-left: 16px;
-  }
+}
   
-  .btn-no-style:hover {
+.btn-no-style:hover {
     background: none;
     color: #3486eb;
-  }
-  
+}
   
 textarea, input {
     padding: .5%;
@@ -146,11 +137,6 @@ textarea {
     min-width: 100%;
     min-height: 100px;
 }
-
-/* .ql-container {
-    height: min-content;
-    margin-bottom: 2%;
-} */
 
 .ql-toolbar {
     background-color: #cfb59c;
@@ -195,12 +181,6 @@ form label {
     line-height: 150%;
 }
   
-/* .post .title span {
-    font-style: italic;
-    font-size: 90%;
-    color: #7d7d7d;
-} */
-  
 .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
@@ -237,15 +217,6 @@ form label {
     padding: 20px 0 10px 20px;
 }
   
-footer {
-    background: var(--secondary);
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 3%;
-    font-size: 110%;
-}
-  
 .card-body {
     display: inline-block;
 }
@@ -269,14 +240,15 @@ footer {
     padding-right: 15px;
     padding-bottom: 10px;
 }
-/* .card-columns {
-    @include media-breakpoint-only(lg) {
-      column-count: 2;
-    }
-    @include media-breakpoint-only(xl) {
-      column-count: 3;
-    }
-} */
+
+footer {
+    background: var(--secondary);
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    font-size: 110%;
+}
   
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 900px) {
