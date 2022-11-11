@@ -1,4 +1,4 @@
-# Cat-Adpotion-Blog
+# Cat Adpotion Blog
 
 ## Licensing:
 [![license](https://img.shields.io/badge/license-none-blue)](https://shields.io)
