@@ -59,4 +59,4 @@ https://hidden-shelf-86183.herokuapp.com/
 
 ## Additional Information
 - Github:[github.com/vpratnicki](vpratnicki), [github.com/EtaSveta](EtaSveta), [github.com/DiegoServe](DiegoServe)
-- Email: diego.conserve@gmail.com 
+- Email: vanessa@pratnicki.net, diego.conserve@gmail.com 
